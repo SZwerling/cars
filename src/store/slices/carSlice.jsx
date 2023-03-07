@@ -25,7 +25,7 @@ const carSlice = createSlice({
             const updated = state.list.filter((car) => car.id !== action.payload);
             state.list = updated;
         }
-    }
+    },
 })
 
 export const { changeSearchTerm, addCar, removeCar } = carSlice.actions;
