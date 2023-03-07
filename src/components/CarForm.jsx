@@ -35,7 +35,7 @@ function CarForm(){
                     </div>
                     <div className="field">
                         <label className="label">cost</label>
-                        <input className="input is-expanded" value={cost || ''} onChange={handleCostChange} type="number" />
+                        <input className="input is-expanded" value={cost || ''} onChange={handleCostChange} type="number" step="0.01" />
                     </div>
                 </div>
                 <div className="field">
