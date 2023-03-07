@@ -6,7 +6,7 @@ const carSlice = createSlice({
     name: 'car',
     initialState: {
         searchTerm: '',
-        cars: []
+        list: []
     },
     reducers: {
         changeSearchTerm(state, action) {
@@ -14,7 +14,7 @@ const carSlice = createSlice({
         },
         addCar(state, action){
             //assumes action.payload is an object with name and cost properties
-            state.cars.push({
+            state.list.push({
                 name: action.payload.name,
                 cost: action.payload.cost,
                 id: nanoid()
@@ -22,8 +22,8 @@ const carSlice = createSlice({
         },
         removeCar(state, action){
             //assumes action.payload is id of car to remove\
-            const updated = state.cars.filter((car) => car.id !== action.payload);
-            state.cars = updated;
+            const updated = state.list.filter((car) => car.id !== action.payload);
+            state.list = updated;
         }
     }
 })

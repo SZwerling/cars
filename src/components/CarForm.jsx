@@ -4,7 +4,6 @@ import { changeName, changeCost, addCar } from "../store";
 function CarForm(){
     const dispatch = useDispatch();
     const {name, cost} = useSelector((state) => {
-        console.log(state)
         return {
             name: state.form.name,
             cost: state.form.cost
@@ -19,9 +18,10 @@ function CarForm(){
         dispatch(changeCost(carCost))
     }
     const handleSubmit = (e) => {
-        console.log(e)
         e.preventDefault()
         dispatch(addCar({name, cost}))
+        dispatch(changeCost(0))
+        dispatch(changeName(''))
     }
 
     return(
