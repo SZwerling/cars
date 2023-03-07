@@ -1,8 +1,9 @@
-import { createReducer, createSlice, nanoid } from "@reduxjs/toolkit";
+import { createSlice, nanoid } from "@reduxjs/toolkit";
+
 
 
 const carSlice = createSlice({
-    name: 'cars',
+    name: 'car',
     initialState: {
         searchTerm: '',
         cars: []
