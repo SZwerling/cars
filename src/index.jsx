@@ -10,8 +10,7 @@ root.render(<App />);
 
 
 
-// comps
-// CarForm
-// CarSearch
-// CarList
-// CarValue 
+// State: car name(string input), car cost(number input), 
+// search term(string input), 
+// Cars(array of objects{id: , name: , cost: })
+// DERIVED STATE -- total cost(number), Match between input and car already in state 
